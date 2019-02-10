@@ -125,3 +125,4 @@ eval `keychain --eval id_rsa --eval id_ed25519`
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export PATH="$HOME/bin:$PATH"
+PS1="\[\e]0;\u@\h: \w\a\]\[\e[01;34m\]\u\[\e[0m\]\[\e[00;37m\]@[\[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]] \[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\]\n\[\e[0m\]\[\e[00;32m\]\\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
