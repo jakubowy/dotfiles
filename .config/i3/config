@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:Sans 9
+font pango:monospace 9, Hack 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -135,6 +135,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 #assign [class="X-terminal-emulator"] $workspace1
 assign [class="Chromium-browser"] $workspace2
+assign [class="Google-chrome"] $workspace2
 assign [class="Thunar"] $workspace3
 assign [class="Peazip"] $workspace10
 
@@ -198,6 +199,7 @@ set $sol_green       #859900
 bar { 
         status_command i3blocks -c $HOME/.config/i3/i3blocks.conf #i3status #i3bar #i3status
 	position top
+#        font pango:Font Awesome 5 Free Regular 10
 	    colors {
 		background $sol_base02
 		statusline #F9FAF9
