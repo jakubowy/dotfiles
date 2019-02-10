@@ -236,7 +236,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 
 #class=(the second part of WM_CLASS), title=(_NET_WM_NAME or WM_NAME as fallback) https://i3wm.org/docs/userguide.html#command_criteria
 for_window [class="Pealauncher"] floating enable
-for_window [class="X-terminal-emulator" title="Terminator Preferences"] floating enable
+    for_window [class="X-terminal-emulator" title="Terminator Preferences"] floating enable
+for_window [class="Terminator" title="Terminator Preferences"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
