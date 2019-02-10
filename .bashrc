@@ -123,3 +123,5 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 eval `keychain --eval id_rsa --eval id_ed25519`
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+export PATH="$HOME/bin:$PATH"
