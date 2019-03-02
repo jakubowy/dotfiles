@@ -54,6 +54,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+w focus up
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -77,9 +78,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -222,11 +223,12 @@ gaps outer 8
 smart_gaps on
 
 
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/winding_mountain_road_fog_coniferous_forest-wallpaper-1920x1200.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpaper.jpg
 
 exec --no-startup-id compton -b
 exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet
+exec --no-startup-id pamac-tray
 #exec --no-startup-id /usr/bin/pa-applet
 exec --no-startup-id $HOME/.screenlayout/default.sh
 
