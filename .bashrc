@@ -91,7 +91,7 @@ fi
 alias ll='ls -alF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
-alias pm="sudo pacman"
+alias pm="sudo pacman --color=auto"
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -127,5 +127,5 @@ export PATH="$HOME/bin:$PATH"
 PS1="\[\e]0;\u@\h: \w\a\]\[\e[01;34m\]\u\[\e[0m\]\[\e[00;37m\]@[\[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]] \[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\]\n\[\e[0m\]\[\e[00;32m\]\\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
 
 
-eval `keychain --eval id_rsa --eval id_ed25519`
+eval `keychain --quiet --eval id_rsa --eval id_ed25519`
 

@@ -197,7 +197,8 @@ set $sol_cyan        #2aa198
 set $sol_green       #859900
 
 
-bar { 
+bar {
+        tray_output LVDS-0  
         status_command i3blocks -c $HOME/.config/i3/i3blocks.conf #i3status #i3bar #i3status
 	position top
 #        font pango:Font Awesome 5 Free Regular 10
@@ -218,8 +219,8 @@ bar {
 ###########################################################
 ###########################
 for_window [class="^.*"] border pixel 0
-gaps inner 4
-gaps outer 8
+gaps inner 6
+gaps outer 6
 smart_gaps on
 
 
@@ -231,12 +232,15 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 #exec --no-startup-id /usr/bin/pa-applet
 exec --no-startup-id $HOME/.screenlayout/default.sh
-
+exec --no-startup-id /usr/bin/dunst
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.bmp' -e 'mv $f ~/Pictures/'
 
 #class=(the second part of WM_CLASS), title=(_NET_WM_NAME or WM_NAME as fallback) https://i3wm.org/docs/userguide.html#command_criteria
 for_window [class="Pealauncher"] floating enable
